@@ -3,19 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário de Feedback</title>
+    <title>Avaliação Ceart</title>
     <link rel="stylesheet" href="style/global.css">
     <link rel="stylesheet" href="style/style.css">
+    <link rel="icon" href="asset/favicon.png">
 </head>
 <body>
 
-    <h2>Formulário de Feedback</h2>
+    <h2>Formulário de Avaliação</h2>
     <div id="back">
-        <form id="feedbackForm">
-            <label for="loja">Informe em qual Loja está:</label>
-            <input type="select">
+        <img src="asset/logo.png" alt="logo governo do estado do ceará e logo central de artesanato do ceará">
 
-            <label for="nome">Nome Completo:</label>
+        <form id="feedbackForm">
+            <label for="loja">Escolha a loja onde está:</label>
+                <select id="loja" name="loja" required>
+                    <option value="" disabled selected>Selecione a loja</option>
+                    <option value="Praça Luíza Távora - Galeria">Praça Luíza Távora - Galeria</option>
+                    <option value="Aeroporto">Aeroporto</option>
+                    <option value="Shopping Aldeota">Shopping Aldeota</option>
+                    <option value="Dragão do Mar">Dragão do Mar</option>
+                    <option value="Romeirão">Romeirão</option>
+                    <option value="Cariri">Cariri</option>
+                    <option value="São Paulo">São Paulo</option>
+                </select>
+
+
+            <label for="nome" style="margin-top: 40px;">Nome Completo:</label>
             <input type="text" id="nome" name="nome" required>
 
             <label for="telefone">Número para Contato:</label>
@@ -26,9 +39,9 @@
 
             <label>Motivo do Feedback:</label>
 
-            <small>Leve em consideração: 1 = Muito Insatisfeito | 2 = Insatisfeito | 3 = Normal | 4 = Satisfeito | 5 = Muito satisfeito</small>
+            <small style="margin-top: 40px;">Leve em consideração: 1 = Muito Insatisfeito | 2 = Insatisfeito | 3 = Normal | 4 = Satisfeito | 5 = Muito satisfeito</small>
 
-            <label>Variedade de Produtos:</label>
+            <label style="margin-top: 40px;">Variedade de Produtos:</label>
             <div class="rating">
                 <input type="radio" name="produtos" value="1" required> 1
                 <input type="radio" name="produtos" value="2"> 2
@@ -37,7 +50,7 @@
                 <input type="radio" name="produtos" value="5"> 5
             </div>
 
-            <label>Avaliação para o Atendimento:</label>
+            <label style="margin-top: 40px;">Avaliação para o Atendimento:</label>
             <div class="rating">
                 <input type="radio" name="atendimento" value="1" required> 1
                 <input type="radio" name="atendimento" value="2"> 2
@@ -46,8 +59,8 @@
                 <input type="radio" name="atendimento" value="5"> 5
             </div>
 
-            <label for="observacao">Fale um pouco sobre sua experiência:</label>
-            <textarea id="observacao" name="observacao" maxlength="100"></textarea>
+            <label for="observacao" style="margin-top: 40px;">Fale um pouco sobre sua experiência:</label>
+            <textarea id="observacao" name="observacao" maxlength="300"></textarea>
 
 
             <button type="submit">Enviar</button>

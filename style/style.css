@@ -16,6 +16,21 @@ body {
     height: 100%;
     background-color: #019154ed;
     padding: 30px;
+    justify-items: center;
+    border-radius: 5px;
+}
+#back img{
+    width: 30vw;
+    margin-bottom: 20px;
+}
+
+
+select{
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    box-shadow: none;
+    border-radius: 5px;
 }
 
 /* Labels mais organizadas */
@@ -30,14 +45,19 @@ input, textarea, button {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
-    border: 1px solid #ccc;
+    outline: none;
+    box-shadow: none;
+    border: 1px solid transparent;
     border-radius: 5px;
     font-size: 16px;
+    color: #fff;
+    background-color: rgba(0,0,0,.3);
+    margin-bottom: 20px;
 }
 
 /* Melhorando a aparência da textarea */
 textarea {
-    color: #808080c6;
+    color: #fff;
     min-height: 100px;  /* Altura mínima para evitar campos muito pequenos */
     resize: vertical;  /* Permite redimensionamento apenas para cima/baixo */
 }

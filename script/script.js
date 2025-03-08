@@ -50,12 +50,19 @@ document.getElementById("feedbackForm").addEventListener("submit", function(even
     event.preventDefault();
 
     const cpfInput = document.getElementById("cpf");
-    
+
+    if (!validarCPF(cpfInput.value)) {
+        alert("CPF inválido! Por favor, verifique e tente novamente.");
+        cpfInput.focus();
+        return;
+    }
+
     // Criar o JSON com os dados do formulário
     const formData = {
         nome: document.getElementById("nome").value.trim(),
         telefone: document.getElementById("telefone").value.trim(),
         cpf: cpfInput.value.trim(),
+        loja: document.getElementById("loja").value, // Captura a loja selecionada
         avaliacao: {
             variedadeProdutos: parseInt(document.querySelector('input[name="produtos"]:checked').value),
             atendimento: parseInt(document.querySelector('input[name="atendimento"]:checked').value)
