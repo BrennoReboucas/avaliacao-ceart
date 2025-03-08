@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Feedback</title>
+    <link rel="stylesheet" href="style/global.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+    <h2>Formulário de Feedback</h2>
+    <div id="back">
+        <form id="feedbackForm">
+            <label for="loja">Informe em qual Loja está:</label>
+            <input type="select">
+
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="telefone">Número para Contato:</label>
+            <input type="text" id="telefone" name="telefone" required oninput="formatarTelefone(this)">
+
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" name="cpf" required oninput="formatarCPF(this)">
+
+            <label>Motivo do Feedback:</label>
+
+            <small>Leve em consideração: 1 = Muito Insatisfeito | 2 = Insatisfeito | 3 = Normal | 4 = Satisfeito | 5 = Muito satisfeito</small>
+
+            <label>Variedade de Produtos:</label>
+            <div class="rating">
+                <input type="radio" name="produtos" value="1" required> 1
+                <input type="radio" name="produtos" value="2"> 2
+                <input type="radio" name="produtos" value="3"> 3
+                <input type="radio" name="produtos" value="4"> 4
+                <input type="radio" name="produtos" value="5"> 5
+            </div>
+
+            <label>Avaliação para o Atendimento:</label>
+            <div class="rating">
+                <input type="radio" name="atendimento" value="1" required> 1
+                <input type="radio" name="atendimento" value="2"> 2
+                <input type="radio" name="atendimento" value="3"> 3
+                <input type="radio" name="atendimento" value="4"> 4
+                <input type="radio" name="atendimento" value="5"> 5
+            </div>
+
+            <label for="observacao">Fale um pouco sobre sua experiência:</label>
+            <textarea id="observacao" name="observacao" maxlength="100"></textarea>
+
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script src="script/script.js"></script>
+</body>
+</html>
