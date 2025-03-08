@@ -71,7 +71,7 @@ document.getElementById("feedbackForm").addEventListener("submit", function(even
     };
 
     // Enviar os dados para a API
-    fetch("http://127.0.0.1:5000/enviar", {
+    fetch("https://api-avaliacao-production.up.railway.app/enviar", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData)
