@@ -4,7 +4,7 @@ body {
     max-width: 400px;
     margin: 20px auto;
     padding: 10px;
-    background: url('/asset/bg.png') center center / cover;
+    background: url('http://ceart.sps.ce.gov.br/assets/img/bg_fundo.png') center center / cover;
     background-repeat: no-repeat;
     color: #fff;
     align-items: center;
